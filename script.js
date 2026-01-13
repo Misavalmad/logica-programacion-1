@@ -11,7 +11,10 @@ let num3 = parseInt(prompt('Inserte un tercer numero:'))
 function orderNumber(num1, num2, num3){
     if (num1 === num2 && num2 === num3) {
         console.log(`Son iguales`);
-    }
+    } else if (num1 > num2 && num1 > num3) {
+        console.log(`Num1 es mayor`);
+        
+    } 
     
 }
 
