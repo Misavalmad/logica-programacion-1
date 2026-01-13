@@ -9,9 +9,10 @@ let num2 = parseInt(prompt('Inserte un segundo numero:'))
 let num3 = parseInt(prompt('Inserte un tercer numero:'))
 
 function orderNumber(num1, num2, num3){
-    if (num1 === num2 & num2 === num3) {
-    } console.log(`Son iguales`);
+    if (num1 === num2 && num2 === num3) {
+        console.log(`Son iguales`);
+    }
     
 }
 
-orderNumber()
+orderNumber(num1, num2, num3)
