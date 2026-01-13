@@ -20,6 +20,14 @@ function orderNumber(num1, num2, num3){
         }  
     } else if (num1 < num2 && num2 > num3) {
         console.log(`Num2 es mayor`);
+        if (num1 > num3) {
+            console.log(`Mayor a menor: ${num2}, ${num1}, y ${num3}`);
+            console.log(`Menor a mayor: ${num3}, ${num1}, y ${num2}`);  
+        } else {
+            console.log(`Mayor a menor: ${num2}, ${num3}, y ${num1}`);
+            console.log(`Menor a mayor: ${num1}, ${num3}, y ${num2}`);
+            
+        }
     } else if (num3 > num1 && num3 > num2) {
         console.log(`Num3 es mayor`);
         
