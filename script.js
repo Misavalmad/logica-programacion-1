@@ -9,41 +9,43 @@ let num2 = parseInt(prompt('Inserte un segundo numero:'))
 let num3 = parseInt(prompt('Inserte un tercer numero:'))
 
 function orderNumber(num1, num2, num3){
+    let HTMLresult = '';
+
     if (num1 === num2 && num2 === num3) {
-        console.log(`Son iguales`);
-        console.log(`${num1}, ${num2}, y ${num3}`);
+        HTMLresult = 'Los tres números son iguales: ';
+        HTMLresult += `${num1}, ${num2}, ${num3}`;
     } else if (num1 >= num2 && num1 >= num3) {
-        console.log(`Num1 es mayor`);
+        HTMLresult = 'Num1 es mayor';
         if (num2 > num3){
-            console.log(`Mayor a menor: ${num1}, ${num2} y ${num3}`);
-            console.log(`Menor a mayor: ${num3}, ${num2} y ${num1}`);
+            HTMLresult += `<br>Mayor a menor: ${num1}, ${num2}, y ${num3}`;
+            HTMLresult += `<br>Menor a mayor: ${num3}, ${num2}, y ${num1}`;
         }  else {
-            console.log(`Mayor a menor: ${num1}, ${num3}, y ${num2}`);
-            console.log(`Menor a mayor: ${num2}, ${num3}, y ${num1}`);
+            HTMLresult += `<br>Mayor a menor: ${num1}, ${num3}, y ${num2}`;
+            HTMLresult += `<br>Menor a mayor: ${num2}, ${num3}, y ${num1}`;
         }
     } else if (num2 > num1 && num2 >= num3) {
-        console.log(`Num2 es mayor`);
+        HTMLresult = 'Num2 es mayor';
         if (num1 > num3) {
-            console.log(`Mayor a menor: ${num2}, ${num1}, y ${num3}`);
-            console.log(`Menor a mayor: ${num3}, ${num1}, y ${num2}`);  
+            HTMLresult += `<br>Mayor a menor: ${num2}, ${num1}, y ${num3}`;
+            HTMLresult += `<br>Menor a mayor: ${num3}, ${num1}, y ${num2}`;  
         } else {
-            console.log(`Mayor a menor: ${num2}, ${num3}, y ${num1}`);
-            console.log(`Menor a mayor: ${num1}, ${num3}, y ${num2}`);
+            HTMLresult += `<br>Mayor a menor: ${num2}, ${num3}, y ${num1}`;
+            HTMLresult += `<br>Menor a mayor: ${num1}, ${num3}, y ${num2}`;
             
         }
     } else if (num3 >= num1 && num3 >= num2) {
-        console.log(`Num3 es mayor`);
+        HTMLresult = 'Num3 es mayor';
         if (num1 > num2) {
-            console.log(`Mayor a menor: ${num3}, ${num1}, y ${num2}`);
-            console.log(`Menor a mayor: ${num2}, ${num1}, y ${num3}`);
+            HTMLresult += `<br>Mayor a menor: ${num3}, ${num1}, y ${num2}`;
+            HTMLresult += `<br>Menor a mayor: ${num2}, ${num1}, y ${num3}`;
         } else {
-            console.log(`Mayor a menor: ${num3}, ${num2}, y ${num1}`);
-            console.log(`Menor a mayor: ${num1}, ${num2}, y ${num3}`);
+            HTMLresult += `<br>Mayor a menor: ${num3}, ${num2}, y ${num1}`;
+            HTMLresult += `<br>Menor a mayor: ${num1}, ${num2}, y ${num3}`;
             
         }
         
     }
-    
+    document.getElementById('result').innerHTML = HTMLresult;
 }
 
 orderNumber(num1, num2, num3)
